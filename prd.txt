@@ -1,0 +1,341 @@
+🧱 PHASE 1: Project Setup & Architecture
+✅ Task 1: Initialize Project
+
+Setup Node project
+
+Install:
+
+express
+
+mongoose / mysql2
+
+dotenv
+
+bcrypt
+
+jsonwebtoken
+
+cors
+
+helmet
+
+morgan
+
+express-validator
+
+multer
+
+razorpay or stripe
+
+nodemon (dev)
+
+✅ Task 2: Proper Folder Structure (Important 🔥)
+
+Create scalable structure:
+
+src/
+ ├── config/
+ ├── controllers/
+ ├── middlewares/
+ ├── models/
+ ├── routes/
+ ├── services/
+ ├── utils/
+ ├── validators/
+ └── app.js
+
+
+You must NOT mix everything in one file.
+
+🔐 PHASE 2: Authentication System
+✅ Task 3: User Model
+
+Fields:
+
+name
+
+email (unique)
+
+password (hashed)
+
+role (user/admin)
+
+createdAt
+
+✅ Task 4: Register API
+
+Validate input
+
+Hash password
+
+Store user
+
+✅ Task 5: Login API
+
+Compare password
+
+Generate:
+
+Access token
+
+Refresh token
+
+Return tokens
+
+✅ Task 6: Auth Middleware
+
+Verify JWT
+
+Attach user to request
+
+Protect routes
+
+✅ Task 7: Role-Based Middleware
+
+Allow only admin to:
+
+Create products
+
+Update products
+
+Delete products
+
+🔥 This is VERY important.
+
+🛍️ PHASE 3: Product & Category Management
+✅ Task 8: Category Model
+
+Fields:
+
+name
+
+description
+
+Admin only CRUD.
+
+✅ Task 9: Product Model
+
+Fields:
+
+name
+
+description
+
+price
+
+stock
+
+category (reference)
+
+images
+
+createdBy (admin)
+
+✅ Task 10: Product APIs
+
+Create product (admin)
+
+Update product (admin)
+
+Delete product (admin)
+
+Get all products (pagination)
+
+Get single product
+
+Filter by category
+
+Search by name
+
+Sort by price
+
+🔥 Add pagination properly (limit & page).
+
+🛒 PHASE 4: Cart System
+✅ Task 11: Cart Model
+
+Each user has one cart.
+
+Fields:
+
+user (reference)
+
+items: [
+product,
+quantity
+]
+
+totalPrice
+
+✅ Task 12: Cart APIs
+
+Add item
+
+Update quantity
+
+Remove item
+
+Get cart
+
+Clear cart
+
+Important logic:
+
+Check stock before adding
+
+Update total price correctly
+
+🔥 This teaches you real business logic.
+
+📦 PHASE 5: Order System
+✅ Task 13: Order Model
+
+Fields:
+
+user
+
+items
+
+totalAmount
+
+paymentStatus
+
+orderStatus
+
+shippingAddress
+
+createdAt
+
+✅ Task 14: Place Order API
+
+When user places order:
+
+Check stock
+
+Deduct stock
+
+Create order
+
+Clear cart
+
+🔥 Use transactions (important for real backend).
+
+✅ Task 15: Order Status Management
+
+Statuses:
+
+Pending
+
+Paid
+
+Shipped
+
+Delivered
+
+Cancelled
+
+Admin can update status.
+
+💳 PHASE 6: Payment Integration (Stripe or Razorpay Test Mode)
+✅ Task 16: Create Payment Intent
+
+Send total amount
+
+Generate payment order
+
+✅ Task 17: Payment Verification
+
+Verify signature (very important)
+
+Update paymentStatus
+
+Update orderStatus
+
+🔥 This is real-world backend skill.
+
+📊 PHASE 7: Admin Dashboard APIs
+✅ Task 18: Admin APIs
+
+Total users count
+
+Total orders
+
+Revenue calculation
+
+Top selling products
+
+Low stock products
+
+This teaches:
+
+Aggregation
+
+Analytics queries
+
+🛡️ PHASE 8: Security & Optimization
+✅ Task 19: Security
+
+Helmet
+
+Rate limiting
+
+Input validation
+
+Prevent NoSQL injection
+
+Secure JWT secrets
+
+✅ Task 20: Performance
+
+Index email
+
+Index product name
+
+Index category
+
+Proper pagination
+
+Use lean queries (Mongo)
+
+🧪 PHASE 9: Testing (Optional but Powerful)
+
+Write unit tests for:
+
+Auth
+
+Product APIs
+
+Order logic
+
+Use:
+
+Jest
+
+Supertest
+
+🚀 PHASE 10: Deployment
+✅ Task 21:
+
+Environment variables
+
+Production build
+
+Deploy to:
+
+Render / Railway
+
+Use PM2 (optional)
+
+🧠 BONUS ADVANCED FEATURES (If You Want Resume-Level)
+
+Wishlist system
+
+Coupon system
+
+Refund logic
+
+Email notifications
+
+Redis caching
+
+API documentation (Swagger)
