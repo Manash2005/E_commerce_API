@@ -5,15 +5,15 @@ Setup Node project
 
 Install:
 
-express
+express - done
 
-mongoose / mysql2
+mongoose - done
 
-dotenv
+dotenv - done
 
-bcrypt
+bcrypt - done
 
-jsonwebtoken
+jsonwebtoken - done
 
 cors
 
@@ -27,7 +27,7 @@ multer
 
 razorpay or stripe
 
-nodemon (dev)
+nodemon - done
 
 ✅ Task 2: Proper Folder Structure (Important 🔥)
 
@@ -35,20 +35,20 @@ Create scalable structure:
 
 src/
  ├── config/
- ├── controllers/
+ ├── controllers/ - done
  ├── middlewares/
- ├── models/
- ├── routes/
- ├── services/
+ ├── models/ - done
+ ├── routes/ - done
+ ├── services/ 
  ├── utils/
  ├── validators/
- └── app.js
+ └── app.js - done
 
 
 You must NOT mix everything in one file.
 
 🔐 PHASE 2: Authentication System
-✅ Task 3: User Model
+✅ Task 3: User Model - done
 
 Fields:
 
@@ -62,7 +62,7 @@ role (user/admin)
 
 createdAt
 
-✅ Task 4: Register API
+✅ Task 4: Register API - done
 
 Validate input
 
@@ -72,11 +72,11 @@ Store user
 
 ✅ Task 5: Login API
 
-Compare password
+Compare password - done
 
 Generate:
 
-Access token
+Access token - done
 
 Refresh token
 
