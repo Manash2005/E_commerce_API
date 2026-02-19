@@ -5,15 +5,12 @@ const cors = require("cors")
 require("dotenv").config()
 
 const app = express()
-app.use(cors({
-    origin : "http://localhost:5000/api",
-    credentials : true
-}))
+app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 
 
-app.use("/api", authRoutes)
+app.use("/api/auth", authRoutes)
 
 
 module.exports = app

@@ -11,7 +11,7 @@ async function registerUser(req,res){
     const userAlreadyExists = await userModel.findOne({email});
     if(userAlreadyExists){
         return res.status(409).json({
-            message : "Unauthorised"
+            message : "Email already exists. Please use a different email."
         })
     }
 
@@ -77,8 +77,9 @@ async function loginUser(req,res){
     res.cookie("token", token)
 
     console.log(`${user.name} logged in successfully`.green)
-    res.status(201).json({
-        message : "User logged in successfully"
+    res.status(200).json({
+        message : "User logged in successfully",
+        accessToken : token
     })
 
 }

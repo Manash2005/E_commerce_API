@@ -8,9 +8,13 @@ async function connectDB(){
         console.log("Connected to Database".green)
     }
     catch(error){
-        console.log("Database Conection Error".red , error)
-        process.exit(1)
-
+        console.log("Database Connection Error:".red)
+        console.log(error.message)
+        console.log("\nMake sure:")
+        console.log("1. MongoDB Atlas is running")
+        console.log("2. Your IP is whitelisted in MongoDB Atlas")
+        console.log("3. MONGO_URI is correct in .env")
+        console.log("4. You have internet connection")
     }
 }
 
